@@ -95,7 +95,7 @@ nav a:hover {
 
 footer {
   text-align: center;
-  background: url("bg.jpeg"); /* imagem no css - replica a imagem */
+  background: url("../assets/bg.jpeg"); /* imagem no css - replica a imagem */
   padding: 40px 0;
 }
 
