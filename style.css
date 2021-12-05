@@ -2,6 +2,8 @@ body {
   /* beneficio de usar fonts para web é que elas são mais padronizada para diferentes navegadores */
   font-family: 'Montserrat', sans-serif;
   word-wrap: break-word; 
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -104,7 +106,7 @@ footer {
 }
 
 form {
-  margin: 40px 0;
+  margin: 40px 40px;
 }
 
 form label, form legend {
@@ -117,7 +119,7 @@ form label, form legend {
   display: block;
   margin: 0 0 20px;
   padding: 10px 25px;
-  width: 50%;
+  width: 60%;
 }
 
 .checkbox {
@@ -143,7 +145,7 @@ p.paragrafo {
 */
 
 .enviar {
-  width: 40%;
+  width: 60%;
   padding: 15px 0;
   background: orange;
   color: #FFF;
@@ -151,21 +153,21 @@ p.paragrafo {
   font-size: 18px;
   border: none;
   border-radius: 5px;
-  transition: 1s all; /* ! */
+  transition: 0.4s all; /* ! */
   cursor: pointer;
   margin-top: 20px;
 }
 .enviar:hover {
-  background: darkorange;
+  background: rgb(255, 94, 0);
   /* colocar uma atras da outra vai ser reescrita */
   /*transform: scale(1.2);
   transform: rotate(70deg);*/
   /* transform: scale(1.2) rotate(180deg); */
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 table {
-  margin: 20px 0 40px;
+  margin: 20px 40px 40px;
 }
 
 
@@ -247,11 +249,11 @@ p::first-line {
   /*background: linear-gradient(45deg, orange,red, purple);
   background: linear-gradient(90deg, orange 50%,red, purple);
   background: radial-gradient(orange 50%,red, purple);*/
-}
+  }
 
-.mapa-conteudo {
+.mapa-conteudo{ 
   width: 940px;
-  margin: 0 auto;  
+  margin: 0 auto;   
 }
 
 .mapa p {
@@ -332,32 +334,46 @@ p::first-line {
   width: calc(40% - ((26px * 4) / 4))
 }*/
 
-@media screen and (max-width: 550px) { /* em telas com a largura maxima de 480px */
-  .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video/*, .input-padrao, .produtos*/ {
-    width: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+@media screen and (max-width: 550px) { /* em telas com a largura maxima de 550 pixels */
+
+  .caixa li {
+    padding: 0;
   }
   h1 {
     text-align: center;
   }
   nav {
     position: static;
-    /*text-align: center;*/
+    text-align: center;
   }
   .lista-beneficios, .imagem-beneficios {
     width: 100%;
   }
   .produtos li {
     display: block;
-    text-align: center;
-    margin: 0 auto 5% auto;
     width: 80%;
+    margin: 5% auto;
   }
-  form {
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;    
-  }
+}
 
+@media screen and (max-width: 940px) {
+  .caixa {
+    width: auto;
+  }
+  .caixa li {
+    padding-right: 10px;
+  }
+  .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .produtos {
+    width: auto;
+  }
+  .produtos li {
+    text-align: center;
+    width: 45%;
+    margin-bottom: 3%;
+  }
 }
